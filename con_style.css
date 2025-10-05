@@ -1,3 +1,6 @@
+/* =============================
+   🌿 BASE STYLES
+============================= */
 body {
   font-family: sans-serif;
   background-color: #e8f3ef;
@@ -7,26 +10,27 @@ body {
   line-height: 1.6;
 }
 
-h1,
-h2 {
+h1, h2 {
   text-align: center;
   color: #0c2d23;
 }
 
-/* ==== Navbar  ==== */
+/* =============================
+   🌿 NAVBAR
+============================= */
 .navbar {
-  position: fixed;       /* Fixes navbar at top */
-  top: 0;                /* Align to top of viewport */
-  left: 0;               /* Align left */
-  width: 100%;           /* Full width */
-  z-index: 1000;         /* Stay above other content */
-  background-color: #0c2d23; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #0c2d23;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional shadow */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -42,9 +46,7 @@ h2 {
   padding: 0;
   display: flex;
   gap: 2rem;
-  /* spacing between links */
   margin-right: 2rem;
-  /* moves them a bit left */
 }
 
 .nav-links li {
@@ -69,7 +71,13 @@ h2 {
   background-color: #198754;
 }
 
-/* ==== Contact Form ==== */
+/* =============================
+   🌿 CONTACT FORM
+============================= */
+main {
+  margin-top: 100px; /* Space for fixed navbar */
+}
+
 .contact-container {
   max-width: 700px;
   margin: 2rem auto;
@@ -78,7 +86,6 @@ h2 {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
 }
 
 .contact-form {
@@ -87,12 +94,10 @@ h2 {
   gap: 1rem;
 }
 
-
 input,
 button {
   padding: 0.7rem;
   border: 1px solid #0c2d23;
-  ;
   border-radius: 8px;
   font-size: 1rem;
 }
@@ -120,26 +125,9 @@ input:focus {
   background: #145a41;
 }
 
-
-.download-link {
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.download-link a {
-  color: #0c2d23;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.download-link a:hover {
-  color: #145a41;
-  /* slightly lighter green on hover */
-  text-decoration: underline;
-}
-
-
+/* =============================
+   🌿 FOOTER
+============================= */
 footer {
   background: #0c2d23;
   padding-top: 50px;
@@ -150,7 +138,7 @@ footer {
   margin: auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; /* Better for responsiveness */
+  flex-wrap: wrap;
 }
 
 .footer-content {
@@ -179,7 +167,6 @@ h3 {
   position: relative;
 }
 
-/* Hover underline effect */
 .list li::before {
   content: '';
   position: absolute;
@@ -189,7 +176,6 @@ h3 {
   width: 0;
   height: 2px;
   background: #80ffc2;
-  /* Green underline */
   transition-duration: 0.4s;
 }
 
@@ -205,10 +191,8 @@ h3 {
 
 .list a:hover {
   color: #80ffc2;
-  /* Green hover */
 }
 
-/* Social Icons */
 .social-icons {
   text-align: center;
 }
@@ -228,11 +212,9 @@ h3 {
 
 .social-icons i:hover {
   color: #80ffc2;
-  /* Green on hover */
   transform: scale(1.2);
 }
 
-/* Bottom bar */
 .bottom-bar {
   background: #145a41;
   text-align: center;
@@ -246,25 +228,196 @@ h3 {
   font-size: 14px;
 }
 
-/* ==== Responsive Design ==== */
+/* ===== Responsive Design (Improved for All Devices) ===== */
+
+/* Tablets (Portrait + Landscape) */
+@media (min-width: 601px) and (max-width: 992px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  /* Footer */
+  .container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-content {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icons i {
+    font-size: 40px;
+  }
+}
+
+/* ===== Mobile Devices ===== */
 @media (max-width: 600px) {
+  /* Navbar */
   .navbar {
     flex-direction: column;
-    text-align: center;
+    padding: 0.5rem;
   }
 
   .nav-links {
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
   }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+ 
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Form elements */
+  input, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  /* Footer */
+  .container {
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .social-icons i {
+    font-size: 36px;
+  }
+
+  .bottom-bar {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}
+
+/* ===== Laptops (Default Layout Tweak) ===== */
+@media (min-width: 993px) and (max-width: 1400px) {
+  
+  .footer-content {
+    width: 30%;
+  }
+}
+ 
+
+/* responsiveness for form */
+/* ==========================================================
+   📱 RESPONSIVE FIX — CONTACT FORM ONLY
+========================================================== */
+
+/* ---------- Mobile (max 600px) ---------- */
+@media (max-width: 600px) {
+
+  /* Prevent form from hiding under navbar */
+  .contact-container {
+    margin-top: 280px; /* pushes form below fixed navbar */
+    width: 90%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .contact-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0c2d23;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #0c2d23;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons .btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Tablet (601px - 992px) ---------- */
+@media (min-width: 601px) and (max-width: 992px) {
 
   .contact-container {
-    margin: 1rem;
-    padding: 1rem;
+    margin-top: 220px;
+    width: 80%;
+    padding: 2rem;
+    box-sizing: border-box;
   }
 
-  .contact-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  .contact-container h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form label {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem;
+    border: 1px solid #0c2d23;
+    border-radius: 8px;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-buttons .btn {
+    width: 48%;
   }
 }
