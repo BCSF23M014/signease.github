@@ -75,7 +75,7 @@
             </section>
 
             
-        <!-- ==== Our Team Section ==== -->
+          <!-- ==== Our Team Section ==== -->
         <section id="team" class="team-section">
         <h2>Meet Our Team</h2>
         <p class="team-intro">We are educators, designers, and community members dedicated to creating accessible, visual-first experiences.</p>
@@ -126,7 +126,7 @@
 
             <div class="video-box">
                 <video controls muted>
-                <source src="assets/images/introduction.mp4" type="video/mp4">
+                <source src="introduction.mp4" type="video/mp4">
                  <track src="sarah_intro.vtt" kind="subtitles" srclang="en" label="English" default>
                 </video>
             </div>
@@ -162,24 +162,39 @@
     <label for="rating-popup" class="close-btn">Close</label>
   </div>
 </div>
-<article>
-  <section>
-    <h2>History of Sign Language</h2>
-    <p>Sign language has been used for centuries...</p>
-  </section>
-</article>
+<!-- 🌿 BEGIN: Sign Language Info Section -->
+<div class="aboutus-signlanguage">
 
-<div class="highlight">Did you know? ASL is the 3rd most used language in the US.</div>
-<p>Inline example: <span class="note">important</span> word here.</p>
+  <article class="info-card">
+    <section>
+      <h2>History of Sign Language</h2>
+      <p>
+        Sign language has been used for centuries as a vital means of communication for the Deaf community.
+        It evolved naturally, just like spoken languages, with regional variations and rich cultural significance.
+      </p>
+    </section>
+  </article>
 
-<div class="override">
-  <p>This text should turn red due to CSS specificity.</p>
+  <div class="highlight-box">
+    <strong>Did you know?</strong> ASL is the <span style="color: #145a41;" class="note">3rd most used language</span> in the US.
+  </div>
+
+  <p class="inline-note">
+    Inline example: <span class="note">important</span> word here.
+  </p>
+
+  <div class="override-box">
+    <p>This text should turn red due to CSS specificity.</p>
+  </div>
+
+  <details class="asl-details">
+    <summary>Learn more about ASL</summary>
+    <p>ASL is widely used in North America and has its own grammar, syntax, and unique expressions.</p>
+  </details>
+
 </div>
+<!-- 🌿 END: Sign Language Info Section -->
 
-<details>
-  <summary>Learn more about ASL</summary>
-  <p>ASL is widely used in North America...</p>
-</details>
 
 
 </main>
