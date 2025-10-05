@@ -513,3 +513,271 @@ h3 {
 .toggle-label::after {
   content: " (Show Transcript)";
 }
+
+/* ===== Responsive Design (Improved for All Devices) ===== */
+
+/* Tablets (Portrait + Landscape) */
+@media (min-width: 601px) and (max-width: 992px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  /* Footer */
+  .container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-content {
+    width: 45%;
+    margin-bottom: 1.5rem;
+  }
+
+  .social-icons i {
+    font-size: 40px;
+  }
+}
+
+/* ===== Mobile Devices ===== */
+@media (max-width: 600px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+ 
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Form elements */
+  input, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  /* Footer */
+  .container {
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .social-icons i {
+    font-size: 36px;
+  }
+
+  .bottom-bar {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}
+
+/* ===== Laptops (Default Layout Tweak) ===== */
+@media (min-width: 993px) and (max-width: 1400px) {
+  
+  .footer-content {
+    width: 30%;
+  }
+}
+ 
+/* responsiveness for videos */
+
+/* ===========================================
+   📱 RESPONSIVENESS — MAIN CONTENT ONLY
+=========================================== */
+
+/* ----------- Tablets (max-width: 1024px) ----------- */
+@media (max-width: 1024px) {
+  /* 🎬 YouTube Video Frames */
+  .video-card iframe,
+  .video-card video {
+    width: 85%;
+    height: 350px;
+    border-radius: 12px;
+  }
+
+  .video-card {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  /* Audio Section */
+  .audio-section {
+    width: 80%;
+    padding: 1.5rem;
+  }
+}
+
+/* ----------- Mobile Devices (max-width: 768px) ----------- */
+@media (max-width: 768px) {
+  /* 🎬 YouTube Video Frames */
+  .video-card iframe,
+  .video-card video {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .videos-section {
+    padding: 1rem;
+  }
+
+  /* Audio Section */
+  .audio-section {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}
+
+/* ----------- Small Phones (max-width: 480px) ----------- */
+@media (max-width: 480px) {
+ 
+  /* 🎬 YouTube Video Frames */
+  .video-card iframe,
+  .video-card video {
+    width: 100%;
+    height: 200px;
+  }
+
+  .video-card {
+    width: 100%;
+  }
+
+  /* Audio Section */
+  .audio-section {
+    width: 95%;
+    padding: 0.8rem;
+  }
+}
+
+
+/* responsiveness for cards */
+
+/* ===========================================
+   📱 RESPONSIVENESS (Not affecting Navbar/Footer)
+=========================================== */
+
+/* ----------- Tablets (max-width: 1024px) ----------- */
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 50px 5%;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  /* Flashcards Section */
+  .flashcards-grid,
+  .flashcards {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    column-gap: 20px;
+    row-gap: 40px;
+  }
+
+  .flashcard {
+    width: 200px;
+    height: 260px;
+  }
+
+  .flashcard-front img {
+    height: 150px;
+  }
+
+ 
+}
+
+/* ----------- Mobile Devices (max-width: 768px) ----------- */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 40px 4%;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  /* Flashcards Section */
+  .flashcards-grid,
+  .flashcards {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .flashcard {
+    width: 90%;
+    height: 260px;
+  }
+
+  .flashcard-front img {
+    height: 140px;
+  }
+
+}
+
+/* ----------- Small Phones (max-width: 480px) ----------- */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.3rem;
+  }
+
+  .flashcard {
+    height: 240px;
+    width: 100%;
+  }
+
+  .flashcard-front img {
+    height: 120px;
+  }
+
+  
+}
