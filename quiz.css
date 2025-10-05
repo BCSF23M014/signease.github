@@ -1,5 +1,5 @@
 /* =========================
-   quiz styleheet
+   BASIC RESET
 ========================= */
 * {
   margin: 0;
@@ -15,7 +15,7 @@ body {
   background-color: #e8f3ef;
   color: #145a41;
   line-height: 1.6;
-  padding-top: 70px;
+  padding-top: 100px; /* increased to prevent overlap with fixed navbar */
 }
 
 /* =========================
@@ -24,14 +24,14 @@ body {
 .quiz-section {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   text-align: center;
 }
 
 .quiz-section h1 {
   color: #0c2d23;
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.3rem;
+  margin-bottom: 0.8rem;
 }
 
 .quiz-section p {
@@ -222,7 +222,6 @@ footer {
 
 .list li {
   padding: 7px 0;
-  position: relative;
 }
 
 .list a {
@@ -272,70 +271,165 @@ footer {
    RESPONSIVENESS
 ========================= */
 
-/* 📱 Mobile (max-width: 600px) */
+/* Adjust heading visibility on mobile (navbar taller) */
 @media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
+  body {
+    padding-top: 130px;
   }
+}
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    margin-right: 0;
-  }
-
+/* Responsive Quiz Layout (Tablets) */
+@media (max-width: 992px) {
   .quiz-section {
+    max-width: 90%;
+    margin: 6rem auto 2rem auto;
     padding: 1rem;
+  }
+
+  .quiz-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .quiz-card {
+    padding: 1.2rem;
+  }
+
+  .quiz-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Quiz Layout (Mobiles) */
+@media (max-width: 600px) {
+  .quiz-section {
     width: 95%;
+    margin: 7rem auto 2rem auto;
+    padding: 1rem;
+  }
+
+  .quiz-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .quiz-section p {
+    font-size: 1rem;
   }
 
   .quiz-card {
     padding: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .footer-content {
+  .quiz-card h2 {
+    font-size: 1rem;
+  }
+
+  .quiz-card label {
+    font-size: 0.95rem;
+  }
+
+  .btn {
     width: 100%;
+    font-size: 0.9rem;
   }
 }
 
-/* 📱 Tablets (601px - 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
+/* ===== Responsive Design (Improved for All Devices) ===== */
+
+
+/* ===== Responsive Design (Improved for All Devices) ===== */
+
+/* Tablets (Portrait + Landscape) */
+@media (min-width: 601px) and (max-width: 992px) {
+
+  /* Navbar */
   .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    padding: 0 1rem;
   }
 
   .nav-links {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .quiz-section {
-    width: 90%;
-    padding: 1.5rem;
+ 
+
+
+}
+
+/* ===== Mobile Devices ===== */
+@media (max-width: 600px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
   }
 
-  .footer-content {
-    width: 45%;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+ 
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Form elements */
+  input, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+
+}
+
+
+
+/* =========================
+   RESPONSIVE FOOTER
+========================= */
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 20px;
+  }
+
+  .footer-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .social-icons i {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
   }
 }
 
-/* 💻 Laptops (901px - 1200px) */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .quiz-section {
-    max-width: 850px;
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .footer-content {
-    width: 30%;
+  footer {
+    padding-bottom: 70px; /* Extra space to ensure icons not cut off */
   }
-}
 
-/* 🖥️ Desktops (above 1200px) */
-@media (min-width: 1201px) {
-  .quiz-section {
-    max-width: 1000px;
+  .social-icons {
+    gap: 10px;
   }
 }
