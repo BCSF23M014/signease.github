@@ -918,35 +918,6 @@ dialog::backdrop {
     padding: 1rem;
   }
 
-  /* --- Navbar --- */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0c2d23;
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 1rem;
-    margin: 0.5rem 0;
-  }
-
-  .nav-links a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-  }
 
   /* --- Intro Section --- */
   #introsec {
@@ -975,69 +946,11 @@ dialog::backdrop {
     line-height: 1.6;
   }
 
-  /* --- Footer --- */
-  footer {
-    text-align: center;
-    padding: 1rem 0.5rem;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .footer-content {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .footer-content p,
-  .footer-content ul li {
-    font-size: 0.95rem;
-  }
-
-  .social-icons i {
-    font-size: 32px;
-    padding: 10px;
-  }
-
-  .bottom-bar p {
-    font-size: 0.85rem;
-    padding: 0.5rem 0;
-  }
 }
 
 /* 💻 Tablet (601px - 992px) */
 @media (min-width: 601px) and (max-width: 992px) {
-  /* --- Navbar --- */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #0c2d23;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .nav-links a {
-    padding: 10px 12px;
-    font-size: 1rem;
-  }
+  
 
   /* --- Intro Section --- */
   #introsec {
@@ -1085,36 +998,101 @@ dialog::backdrop {
     z-index: 0;
   }
 
-  /* --- Footer --- */
-  footer {
-    padding: 2rem 1rem;
-    text-align: center;
+
+}
+
+/* ===== Responsive Design (Improved for All Devices) ===== */
+
+/* Tablets (Portrait + Landscape) */
+@media (min-width: 601px) and (max-width: 992px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    padding: 0 1rem;
   }
 
-  .container {
+  .nav-links {
+    gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
+  }
+
+  
+  /* Footer */
+  .container {
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   .footer-content {
     width: 45%;
-  }
-
-  .footer-content h3 {
-    font-size: 1.5rem;
-  }
-
-  .footer-content p {
-    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .social-icons i {
     font-size: 40px;
-    padding: 12px;
+  }
+}
+
+/* ===== Mobile Devices ===== */
+@media (max-width: 600px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
   }
 
-  .bottom-bar p {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 10px;
     font-size: 0.9rem;
+  }
+
+ 
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  /* Form elements */
+  input, button {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  /* Footer */
+  .container {
+    flex-direction: column;
+    width: 95%;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .social-icons i {
+    font-size: 36px;
+  }
+
+  .bottom-bar {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+}
+
+/* ===== Laptops (Default Layout Tweak) ===== */
+@media (min-width: 993px) and (max-width: 1400px) {
+  
+  .footer-content {
+    width: 30%;
   }
 }
